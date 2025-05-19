@@ -3,10 +3,19 @@
 ## Structure du projet
 
 ```plaintext
-python-projects/
-│
-├── app.py               # Point d’entrée Streamlit
-├── requirements.txt     # Dépendances Python
-├── config.py            # Paramètres globaux
-│
-└── modules/             # Modules pour chaque projet
+
+crypto/
+
+- config.py          # global defaults for every crypto sub-project
+
+- functions/         # shared helper routines
+
+- projects/
+
+--- spot_analysis/
+------- config.py      # spot-specific defaults
+------- run.py         # SpotAnalysis class
+
+--- volatility/
+------- config.py      # volatility-specific defaults
+------- run.py
